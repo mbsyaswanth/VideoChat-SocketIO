@@ -1,0 +1,18 @@
+{
+  "name": "VideoChatBackend",
+  "version": "1.0.0",
+  "description": "socket io Backend for my video chat application",
+  "main": "server.js",
+  "author": "Yaswanth",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
