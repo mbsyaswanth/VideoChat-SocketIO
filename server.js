@@ -8,10 +8,10 @@ io.listen(port);
 
 io.on("connection", (socket) => {
   console.log("new socket connected");
-  socket.on("join-room", (roomId, userId, name) => {
-    console.log("new peer joined", userId);
+  socket.on("join-room", (roomId, userId, name, screen = false) => {
+    console.log(`new peer joined : ${name} `, userId);
     socket.join(roomId);
-    socket.to(roomId).broadcast.emit("user-connected", userId, name);
+    socket.to(roomId).broadcast.emit("user-connected", userId, name, screen);
 
     socket.on("disconnect", () => {
       console.log("disconnected", userId);
